@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.next/
+coverage/
+.turbo/
+.dart_tool/
+build/
+ios/Flutter/ephemeral/
+android/.gradle/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.idea/
+*.iml

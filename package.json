@@ -1,0 +1,30 @@
+{
+  "name": "ziiipay",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ZiiiPay phased fintech prototype monorepo.",
+  "workspaces": [
+    "apps/api",
+    "apps/admin-web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "container:scan": "node infrastructure/scripts/container-scan.mjs",
+    "dependency:scan": "node infrastructure/scripts/dependency-scan.mjs",
+    "env:validate": "node infrastructure/scripts/env-validate.mjs",
+    "format:check": "prettier --check \"**/*.{css,js,json,md,mjs,ts,tsx,yaml,yml}\"",
+    "performance:smoke": "k6 run infrastructure/k6/phase12-smoke.js",
+    "lint": "npm run lint --workspaces --if-present",
+    "secret:scan": "node infrastructure/scripts/secret-scan.mjs",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}

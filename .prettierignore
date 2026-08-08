@@ -1,0 +1,7 @@
+node_modules
+dist
+.next
+coverage
+.dart_tool
+build
+package-lock.json
